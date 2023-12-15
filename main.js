@@ -14,20 +14,19 @@ function botonIniciarSesion(){
 function primerInicio(){
   if (cuentas[cuentaSeleccionada].contraseña===""){
     let firstPassword = prompt("Esta es tu primera vez aquí. Establece tu contraseña:");
-    if (firstPassword !== ""){
-      let firstPasswordCheck = prompt("Confirma tu contraseña:");
-    } else {
-      alert("Contraseña no válida.")
-    }
+    let firstPasswordCheck = prompt("Confirma tu contraseña:");
     if (firstPassword === firstPasswordCheck && firstPassword !== ""){
-      cuentas[cuentaSeleccionada].contraseña=firstPassword
-      alert("Todo listo. Ahora puedes acceder.")
+      cuentas[cuentaSeleccionada].contraseña=firstPassword;
+      alert("Todo listo. Ahora puedes acceder.");
+    } else if (firstPassword!==firstPasswordCheck){
+      alert("Las contraseñas no coinciden. Inténtelo de nuevo.");
+    } else {
+      alert("Contraseña no válida. Inténtelo de nuevo.");
     }
   }
 }
 
 function iniciarSesion() {
-
   if (cuentas[cuentaSeleccionada].contraseña!==""){
 
     let password = prompt("Ingresa tu contraseña:");
@@ -36,7 +35,7 @@ function iniciarSesion() {
       if (password === cuentas[cuentaSeleccionada].contraseña) {
         document.getElementById("operaciones").style.display = "block";
         document.getElementById("seleccion").style.display="none"
-        document.getElementById("saludo").innerText = "¡Hola "+cuentas[cuentaSeleccionada].nombre+"!";
+        document.getElementById("saludo").innerText = "¡Bienvenido "+cuentas[cuentaSeleccionada].nombre+"!";
       } else {
         alert("Contraseña incorrecta. Inténtalo nuevamente.");
       }
@@ -101,12 +100,14 @@ function cambiarContraseña(){
     let newPassword = prompt("Ingresa tu nueva contraseña:");
     let newPasswordCheck = prompt("Confirma tu nueva contraseña:");
     if (newPassword===newPasswordCheck && newPassword != ""){
-      cuentas[cuentaSeleccionada].contraseña=newPassword
+      cuentas[cuentaSeleccionada].contraseña=newPassword;
+    } else if (newPassword!==newPasswordCheck){
+      alert("Las contraseñas no coinciden. Inténtelo de nuevo.");
     } else {
-      alert("Las contraseñas no coinciden. Inténtelo nuevamente.")
+      alert("Contraseña no válida. Inténtelo de nuevo.");
     }
   } else {
-    alert("Contraseña incorrecta. Inténtelo nuevamente.")
+    alert("Contraseña incorrecta. Inténtelo nuevamente.");
   }
 
 }
