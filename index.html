@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajero Automático</title>
+  <script src="./main.js" defer></script>
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+  <nav>
+    <div class="navContainer">
+      <img alt="Logo Dev.F" id="logoDevF" src="https://devf-website.s3.amazonaws.com/static/assets/img/logo-devf-white.svg">
+      <img id="logoBanco" src="https://www.bbva.mx/content/dam/public-web/global/images/logos/logo_bbva_blanco.svg" role="img">
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <h1>Cajero Automático</h1>
+
+      <section id="seleccion">
+      <label for="cuentas">Selecciona una cuenta:</label>
+      <select id="cuentas">
+        <option value="0">Mali</option>
+        <option value="1">Gera</option>
+        <option value="2">Maui</option>
+      </select>
+
+      <br><br>
+
+      <button onclick="botonIniciarSesion()">Iniciar<br>Sesión</button>
+      </section>
+
+      <div id="operaciones" style="display: none;">
+        <span id="saludo"></span>
+        <h3>Opciones:</h3>
+        <button onclick="consultarSaldo()">Consultar<br>Saldo</button>
+        <button onclick="ingresarMonto()">Ingresar<br>Monto</button>
+        <button onclick="retirarMonto()">Retirar<br>Monto</button>
+
+        <br><br>
+        <div id="resultado"></div>
+        <br>
+
+        <button onclick="cambiarContraseña()">Cambiar<br>Contraseña</button>
+        <button onclick="regresar()">Regresar<br>a Inicio</button>
+        
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="footerMainContainer">© 2023 BBVA Pirata México, S.A., Institución de Banca en Línea, Grupo Financiero Falso BBVA México. Avenida Paseo de la Refirme 420, colonia Suárez, código postal 12345, alcaldía Ochoa, Ciudad de Mérida.</div>
+  </footer>
+</body>
+</html>

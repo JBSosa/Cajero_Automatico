@@ -1,0 +1,123 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  background-image: url('https://devf-website.s3.amazonaws.com/static/assets/img/fondos/desarrollo.jpg');
+  margin: 0;
+  ;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 220px);
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.5) !important;
+}
+
+button {
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  line-height: 16px;
+  transition: all .15s linear;
+  background-color: #000000;
+  border-color: #000000;
+  color: #fff;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 12px;
+  padding: 0;
+  width: 100px;
+  height: 46px;
+  margin: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  min-height: 233px;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  padding: 25px;
+}
+
+nav {
+  background: #5136AD;
+  height: 110px !important;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  scroll-behavior: smooth;
+  align-items: center;
+}
+
+.navContainer {
+  justify-self: center;
+  vertical-align: center;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+#logoDevF {
+  border-style: none;
+  width: 185px;
+}
+
+#logoBanco {
+  border-style: none;
+  width: 185px;
+  align-self: right;
+  justify-self: right ;
+}
+
+footer {
+  background: #5136AD;
+  height: 110px !important;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  scroll-behavior: smooth;
+  align-items: center;
+  color: white;
+}
+
+#footerMainContainer {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#resultado {
+  border-radius: 3px;
+  border-style: none;
+  border-width: 1px;
+  width: calc(100% - 10px);
+}
+
+select{
+  
+  font-size: Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #1c1e21;
+  border: 1px solid #ccd0d5;
+  overflow: visible !important;
+  width: 55px;
+  cursor: pointer;
+}
