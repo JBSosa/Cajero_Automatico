@@ -53,11 +53,11 @@ function ingresarMonto() {
   let monto = prompt("Ingresa el monto a ingresar:");
   
   if ((cuentas[cuentaSeleccionada].saldo+parseFloat(monto)) > 990) {
-    alert("Monto supera $990");
+    alert("La transacción no cumple con la regla de negocio. Saldo no puede superar $990.");
   } else {
-    if (monto && !isNaN(monto) && monto > 0 && (cuentas[cuentaSeleccionada].saldo+=parseFloat(monto)) < 900) {
+    if (monto && !isNaN(monto) && monto > 0) {
     monto = parseFloat(monto);
-    cuentas[cuentaSeleccionada].saldo += monto;
+    cuentas[cuentaSeleccionada].saldo = cuentas[cuentaSeleccionada].saldo+monto;
     actualizarResultado("Ingresaste $" + monto + ". Nuevo saldo: $" + cuentas[cuentaSeleccionada].saldo);
     } else {
     alert("Ingresa un monto válido.");
@@ -75,7 +75,7 @@ function retirarMonto() {
       cuentas[cuentaSeleccionada].saldo -= monto;
       actualizarResultado("Retiraste $" + monto + ". Nuevo saldo: $" + cuentas[cuentaSeleccionada].saldo);
     } else {
-      alert("La transacción no cumple con la regla de negocio.");
+      alert("La transacción no cumple con la regla de negocio. Saldo no puede ser menor a $10");
     }
   } else {
     alert("Ingresa un monto válido.");
@@ -109,7 +109,6 @@ function cambiarContraseña(){
   } else {
     alert("Contraseña incorrecta. Inténtelo nuevamente.");
   }
-
 }
 
 document.getElementById("cuentas").addEventListener("change", function() {
